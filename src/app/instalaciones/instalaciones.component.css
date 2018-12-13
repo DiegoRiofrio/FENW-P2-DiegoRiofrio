@@ -1,0 +1,26 @@
+.instalaciones .container {
+  background: #d4edf6;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+.instalaciones .row {
+  display: flex;
+  align-items: center;
+}
+.caja {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+
+@media (max-width: 982px) {
+  .col-md-8 iframe {
+    width: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .col-md-8 iframe {
+    width: 300px;
+  }
+}

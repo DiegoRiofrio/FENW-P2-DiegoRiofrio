@@ -1,0 +1,33 @@
+html, body {
+  height: 100%;
+}
+#content {
+  height: 100%;
+}
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand img {
+  height: 50px;
+}
+
+
+.container.footer {
+  background: #d4edf6;
+  height: 50px;
+  width: 100%;
+}
+.footer p {
+  line-height: 50px;
+  padding-left: 10px;
+}
+
+.nav .active {
+  background: #eee;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 95%;
+  }
+}

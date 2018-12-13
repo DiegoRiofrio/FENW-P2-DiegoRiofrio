@@ -1,0 +1,23 @@
+.content {
+  width: 90%;
+  margin-bottom: 50px;
+  padding: 50px;
+  margin-top: 100px;
+}
+.big-icons .glyphicon {
+
+  line-height: 2.5;
+  font-size:6.0em;
+  color: #337ab7;
+
+}
+
+.big-icons {
+  text-align: center;
+}
+.big-icons p {
+  font-size: 14px;
+  color: #7e8890;
+  text-align: justify;
+
+}

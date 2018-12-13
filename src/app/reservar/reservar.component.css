@@ -1,0 +1,97 @@
+.panel {background: #d4edf6}
+.panel h2{ color:#444444; font-size:18px; margin:0 0 8px 0;}
+.panel h3 { color:#274344; font-size:16px;}
+/*.panel p { color:#777777; font-size:14px; margin-bottom:30px; line-height:24px;}*/
+.main-div-reservas{
+  background: #d4edf6 none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 10px auto 30px;
+  max-width: 60%;
+  padding: 50px 60px 60px 71px;
+}
+.form-heading { color:#d4edf6; font-size:23px;}
+.page .form-control {
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: 1px solid #d4d4d4;
+  border-radius: 4px;
+  font-size: 14px;
+  height: 50px;
+  line-height: 30px;
+}
+.page { text-align:right;}
+.page .form-group {
+  margin-bottom:30px;
+}
+.page { text-align:left;}
+.page  .btn.btn-primary {
+  background: #286090 none repeat scroll 0 0;
+  border-color: #204d74;
+  color: #d4edf6;
+  font-size: 14px;
+  width: auto;
+  height: 50px;
+
+}
+
+.page .btn.btn-primary.reset {
+  background: #286090 none repeat scroll 0 0;
+}
+.page .control-label { color:#777777; font-size:14px; }
+.page .control-label{ text-align:left; }
+
+.escondido{ display: none; }
+
+.boton {
+  display: block;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 28px;
+}
+legend {
+
+  display: block;
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+  width: auto;
+
+}
+fieldset {
+
+  display: block;
+  margin-inline-start: 2px;
+  margin-inline-end: 2px;
+  padding-block-start: 0.35em;
+  padding-inline-start: 0.75em;
+  padding-inline-end: 0.75em;
+  padding-block-end: 0.625em;
+  border-width: 2px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+
+}
+.datepicker {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 2px;
+  margin: 30px 80px 40px 40px;
+  max-width: 80%;
+  padding: 50px 60px 60px 71px;*
+  line-height: 2.5;
+}
+
+
+.justify-content-center .glyphicon {
+
+  line-height: 2.5;
+  font-size:1.5em;
+  color: #337ab7;
+
+}
+.justify-content-center {
+  text-align: center;
+}

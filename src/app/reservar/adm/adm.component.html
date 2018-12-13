@@ -1,0 +1,79 @@
+<h2 class="header"> El día {{EligeFecha()}} tiene las siguientes opciones:</h2>
+<div class="row">
+
+  <div class="col-md-3">
+    <H4>Pista 1</H4>
+    <app-tabdata *ngIf="pista1.content.length > 0" [dataModel]="pista1" [isTextCenter]="true"></app-tabdata>
+    <ng-container *ngIf="pista1.content.length === 0" >
+      <h4>No hay reservas</h4>
+    </ng-container>
+  </div>
+
+  <div class="col-md-3">
+    <h4>Pista 2</h4>
+    <app-tabdata *ngIf="pista2.content.length > 0" [dataModel]="pista2" [isTextCenter]="true"></app-tabdata>
+    <ng-container *ngIf="pista2.content.length === 0" >
+      <h4>No hay reservas</h4>
+    </ng-container>
+  </div>
+
+  <div class="col-md-3">
+    <h4>Pista 3</h4>
+    <app-tabdata *ngIf="pista3.content.length > 0" [dataModel]="pista3" [isTextCenter]="true"></app-tabdata>
+    <ng-container *ngIf="pista3.content.length === 0" >
+      <h4>No hay reservas</h4>
+    </ng-container>
+  </div>
+
+  <div class="col-md-3">
+    <h4>Pista 4</h4>
+    <app-tabdata *ngIf="pista4.content.length > 0" [dataModel]="pista4" [isTextCenter]="true"></app-tabdata>
+    <ng-container *ngIf="pista4.content.length === 0" >
+      <h4>No hay reservas</h4>
+    </ng-container>
+  </div>
+
+</div>
+
+<div class="row justify-content-between">
+  <div class="col-md-3">
+    <h4>Reservas {{UserLogged$ | async}}:</h4>
+    <app-tabdata *ngIf="ReservesTable.content.length > 0" [dataModel]="ReservesTable"></app-tabdata>
+    <ng-container *ngIf="ReservesTable.content.length === 0" >
+      <h4>No tienes ninguna reserva</h4>
+    </ng-container>
+  </div>
+  <div class="col-md-9">
+    <h4>Nueva reserva para: {{EligeFecha()}}</h4>
+    <form [formGroup] = "formRes">
+      <div class="row justify-content-center">
+        <div class="col-md-3">
+          <label>Pista:</label>
+          <select #t (change)="eligePista(t.value)" class="form-control" formControlName="pista">
+            <option [value]="pista" *ngFor="let pista of pistas">{{pista}}</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <label>Horas:</label>
+          <ng-container *ngIf="horas.length > 0">
+            <select class="form-control" formControlName="hora">
+              <option [value]="hora" *ngFor="let hora of horas">{{hora}}</option>
+            </select>
+          </ng-container>
+          <ng-container *ngIf="horas.length === 0">
+            <p>No hay horas disponibles para esta pista</p>
+          </ng-container>
+        </div>
+        <div class="col-md-3 boton">
+          <button (click)="onReserve()"  type="button" class="btn btn-primary boton reservar-button">Reservar</button>
+        </div>
+
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <button  type="button" class="btn btn-secondary boton" (click)="volver()"><span class="glyphicon glyphicon-backward"></span>   Volver   </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

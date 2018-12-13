@@ -1,0 +1,80 @@
+<div class="registro">
+  <div class="container formulario">
+    <div class="row">
+      <form (submit)="doRegistro(registryForm)" [formGroup]="registryForm" class="form-horizontal">
+        <fieldset><legend>Registro de usuario</legend>
+          <div class="form-group row">
+            <label class="col-md-3" for="inputUsername" >Usuario:</label>
+            <div class="col-md-9">
+              <input type="text" class="form-control" id="inputUsername" name="username" formControlName="username"
+                     placeholder="Identificador de usuario"
+                     [ngClass]="{ 'is-invalid': submitted && formFields.username.errors }"/>
+              <div *ngIf="submitted && formFields.username.errors" class="invalid-feedback">
+                <div *ngIf="formFields.username.errors.required"><p><strong>* Usuario es obligatorio!</strong></p></div>
+                <div *ngIf="formFields.username.errors.usernameInUse"><p><strong>*Identificador de usuario ya registrado!</strong></p></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-3" for="inputEmail">Correo:</label>
+            <div class="col-md-9">
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email"
+                     formControlName="email"
+                     [ngClass]="{ 'is-invalid': submitted && formFields.email.errors }"/>
+              <div *ngIf="submitted && formFields.email.errors" class="invalid-feedback">
+                <div *ngIf="formFields.email.errors.required"><p><strong>* Email de usuario es obligatorio!</strong></p></div>
+                <div *ngIf="formFields.email.errors.email"><p><strong>* Email de usuario no tiene formato correcto!</strong></p></div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-3" for="inputPassword">Clave:</label>
+            <div class="col-md-9">
+              <input type="password" class="form-control" id="inputPassword" name="password"
+                     placeholder="Clave" formControlName="password"
+                     [ngClass]="{ 'is-invalid': submitted && formFields.password.errors }"/>
+              <div *ngIf="submitted && formFields.password.errors" class="invalid-feedback">
+                <div *ngIf="formFields.password.errors.required"><p><strong>* Password de usuario es obligatorio!</strong></p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-3" for="inputRepeatPassword">Repita la clave:</label>
+            <div class="col-md-9">
+              <input type="password" class="form-control" id="inputRepeatPassword" name="repassword"
+                     placeholder="Repita la clave" formControlName="repassword"
+                     [ngClass]="{ 'is-invalid': submitted && formFields.password.errors }"/>
+              <div *ngIf="submitted && formFields.repassword.errors" class="invalid-feedback">
+                <div *ngIf="formFields.repassword.errors.required"><p><strong>* Confirmación de clave de usuario es obligatorio!</strong></p></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-md-3" for="idDatepickerFechaNacimiento">Fecha de nacimiento:</label>
+            <div class="col-md-9">
+              <input id="idDatepickerFechaNacimiento"
+                     [max]="max"
+                     [owlDateTimeTrigger]="birthdate" [owlDateTime]="birthdate"/>
+              <owl-date-time [pickerType]="'calendar'" [pickerMode]="'dialog'" #birthdate></owl-date-time>
+            </div>
+          </div>
+          <div *ngIf="alertaRegistroNuevoUsuario" class="alert alert-danger" id="alertaErrorLogin">
+            <p><strong>Error!</strong> registro no realizado</p>
+          </div>
+          <div class="row">
+            <input class="btn btn-primary boton" type="submit" name="" value="Enviar">
+          </div>
+
+        </fieldset>
+
+      </form>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>

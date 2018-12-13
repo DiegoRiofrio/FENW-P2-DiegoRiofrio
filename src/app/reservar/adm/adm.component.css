@@ -1,0 +1,44 @@
+.row {
+  text-align: left;
+  background-color: #f7f7f7;
+}
+.H4 {
+  text-align: left;
+}
+.h4 {
+  text-align: left;
+}
+.boton {
+  display: block;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 28px;
+}
+
+.label {
+  padding-bottom: 10px;
+}
+.row .a {
+  text-align: left;
+  font-size: 18px;
+  color: black;
+}
+.row .H4{
+  background: #d4edf6;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 2;
+  color: black;
+  background: darkgray;
+}
+.justify-content-center .glyphicon {
+
+  line-height: 2.5em;
+  font-size:1.0em;
+  color: #337ab7;
+
+}

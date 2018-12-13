@@ -1,0 +1,33 @@
+.jumbotron {
+  background-image: url('../../assets/portada.jpg');
+}
+
+.jumbotron {
+  width: 80%;
+  margin: 0px auto;
+}
+
+.content {
+  width: 80%;
+  margin-bottom: 50px;
+}
+.content h2 {
+  font-size: 20px;
+  background: #d4edf6;
+  text-align: center;
+  padding: 5px;
+}
+.content p {
+  text-align:justify;
+}
+.content img {
+  margin: 0 auto;
+}
+
+
+.cabecera h1 {
+  color: #ffffff;
+}
+.cabecera p {
+  color: #ffffff;
+}

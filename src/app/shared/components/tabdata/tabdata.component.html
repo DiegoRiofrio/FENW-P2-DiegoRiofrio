@@ -1,0 +1,17 @@
+<table class="table table-services">
+  <thead>
+  <tr>
+    <ng-container *ngFor="let dataHead of dataModel.headValues">
+      <th *ngIf="dataHead !== ''" scope="col">
+        {{dataHead}}
+      </th>
+    </ng-container>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let dataContent of dataModel.content">
+    <th *ngIf="dataContent.nameRow !== ''" scope="row">{{dataContent.nameRow}}</th>
+    <td *ngFor="let dataInfo of dataContent.infoRow">{{dataInfo}}</td>
+  </tr>
+  </tbody>
+</table>

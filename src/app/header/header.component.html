@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html lang='es'>
+<header>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UPM Pádel</title>
+
+</header>
+<body>
+  <nav class="navbar bg-info">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" routerLink="inicio"><img src="../assets/logo.png"/></a>
+      </div>
+      <div>
+        <ul class="nav navbar-nav">
+          <li><a routerLink="inicio">Inicio</a></li>
+          <li><a routerLink="servicios">Servicios</a></li>
+          <li><a routerLink="instalaciones">Instalaciones</a></li>
+          <!--<li><a routerLink="reservar">Reservar</a></li>-->
+          <li><a *ngIf="isLoggedIn$ | async" routerLink="reservar">Reservar</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li *ngIf="isLoggedOut$ | async"><a routerLink="registro"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
+          <li *ngIf="isLoggedOut$ | async"><a routerLink="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+
+          <li *ngIf="isLoggedIn$ | async"><a dropdownToggle>{{UserLogged$ | async}}</a> </li>
+          <li *ngIf="isLoggedIn$ | async"><a routerLink="logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
+
+
+          <!--<li *ngIf="isLoggedIn$ | async" dropdown id="idMenuLogout">
+            <a dropdownToggle>{{isUserLoggedIn$ | async}} <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+              <li *ngIf="isLoggedIn$ | async"><a routerLink="logout">Logout</a></li>
+            </ul>
+          </li>-->
+        </ul>
+
+
+
+
+
+
+        <!--<ul class="nav navbar-nav navbar-right">
+          <li><a routerLink="registro"><span class="glyphicon glyphicon-user"></span> Registro</a></li>
+          <li><a routerLink="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          <li><a id="logoutMenu" href="#"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+        </ul>-->
+      </div>
+    </div>
+
+  </nav>
+
+
+
+
+
+
+<router-outlet></router-outlet>
+</body>
+</html>

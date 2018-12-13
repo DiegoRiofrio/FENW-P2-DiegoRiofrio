@@ -1,0 +1,19 @@
+<div class="main-div-reservas">
+  <div id="panel">
+    <h1>Bienvenido {{UserLogged$ | async}}!</h1>
+    <h2 *ngIf="!selectedDate" class="header">Debes seleccionar una fecha para realizar una reserva ;)</h2>
+    <div class="form-signin" *ngIf="!selectedDate">
+      <div class="row justify-content-center">
+        <div class="col-3">
+            <ngb-datepicker  [displayMonths]="2" [navigation]="select" [showWeekNumbers]="true" [outsideDays]="visible"
+                             class="datepicker" name="dateReserve" [(ngModel)]="struct" [minDate]="minDate"></ngb-datepicker>
+            <button  type="button" class="btn btn-secondary boton" (click)="onReservation()">
+              <span class="glyphicon glyphicon-calendar"></span> Elija el día
+            </button>
+        </div>
+      </div>
+    </div>
+    <app-adm (back)="back()" [allInSeconds]="allInSeconds" *ngIf="selectedDate"></app-adm>
+  </div>
+</div>
+
